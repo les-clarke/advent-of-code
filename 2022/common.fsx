@@ -1,5 +1,6 @@
 module AdventCommon = 
     open System.IO
+    open System
 
     let readLines (filePath:string) = seq {
         use sr = new StreamReader (filePath)
@@ -8,6 +9,10 @@ module AdventCommon =
     }
 
     let readAsString (path) = System.IO.File.ReadAllText path
+
+    let getCharValueInOrder (c: char) = 
+        let sub = if Char.IsUpper c then 38 else 96 
+        (Convert.ToInt32 c) - sub
 
 [<AutoOpen>]
 module List = 

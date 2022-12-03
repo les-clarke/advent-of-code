@@ -1,6 +1,7 @@
 #load "common.fsx"
 
 open System
+open Common
 open Common.AdventCommon
 let filePath = "./inputs/inputone.txt"
 
